@@ -1,0 +1,25 @@
+<section id="checkout">
+    <form action="account.html">
+        <fieldset>
+            <legend>Shipping Address</legend>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Street Address" required>
+            <input type="text" placeholder="Zip Code" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Details</legend>
+            <label><input type="radio" name="pay" value="credit" checked> Credit Card</label>
+            <label><input type="radio" name="pay" value="paypal"> PayPal</label>
+        </fieldset>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <aside style="position: sticky; top: 10px;">
+        <h3>Order Summary</h3>
+        <p>Subtotal: $20.00</p>
+        <p>Shipping: $5.00</p>
+        <p><strong>Total: $25.00</strong></p>
+    </aside>
+</section>
