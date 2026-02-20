@@ -1,0 +1,123 @@
+/* TASK 1:*/
+:root {
+    --primary: #2d3436;
+    --accent: #0984e3;
+    --bg: #f0f2f5;
+    --white: #ffffff;
+    --success: #00b894;
+    --error: #d63031;
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif; 
+    background-color: var(--bg);
+    color: var(--primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+/* TASK 2 */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+nav a {
+    display: block;
+    background: var(--white);
+    padding: 18px;
+    text-align: center;
+    border-radius: var(--radius);
+    text-decoration: none; 
+    color: var(--primary);
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease; 
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* TASK 3 */
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid #ddd; 
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+article:nth-child(odd) { background-color: var(--white); } 
+article:nth-child(even) { background-color: #f9f9f9; }
+
+/* TASK 4: */
+.price::before { content: "$"; } 
+
+input:required { border-bottom: 3px solid var(--error); } 
+input:valid { border-bottom: 3px solid var(--success); }   
+
+#cart-container:empty::after {
+    content: "Your cart is currently empty.";
+    display: block;
+    padding: 40px;
+    text-align: center;
+    color: #888;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+}
+
+input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* TASK 5: */
+table tr td:first-child { 
+    font-weight: bold; 
+    color: var(--accent); 
+}
+
+ul li::marker { 
+    content: "→ "; 
+    color: var(--accent); 
+}
+
+blockquote::before { content: open-quote; color: var(--accent); font-size: 2em; }
+
+
+@media (min-width: 768px) {
+    nav ul { grid-template-columns: repeat(4, 1fr); }
+    .product-grid { flex-direction: row; flex-wrap: wrap; }
+    article { width: calc(33% - 20px); }
+}
