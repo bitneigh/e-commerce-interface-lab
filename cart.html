@@ -1,19 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Cart | TechStore</title>
 </head>
-<section id="cart">
-    <h1>Your Shopping Cart</h1>
-    <ul>
-          <li><h3>Product Name</h3></li>
-            <p>$20.00</p>
-            <input type="number" value="1" min="1">
-    </ul>
-    <section class="subtotal">
-        <p>Total: $20.00</p>
-        <a href="checkout.html" class="button">Proceed to Checkout</a>
-    </section>
-
-    <section class="empty-cart-msg">
-        <p>Your cart is currently empty.</p>
-    </section>
-</section>
+<body>
+    <header><strong>TECHSTORE</strong><nav><ul><li><a href="products.html">Shop</a></li></ul></nav></header>
+    <main style="padding: 40px 8%;">
+        <h2>Review your bag.</h2>
+        <div class="cart-item"> <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="bag">
+            <div style="flex-grow: 1;"><h3>Wireless Max</h3><p>$299</p></div>
+            <input type="number" value="1" style="width: 50px; padding: 5px;">
+        </div>
+        <a href="checkout.html" class="btn-action shimmer-btn" style="width: 100%; text-align: center;">Check Out</a>
+    </main>
+</body>
+</html>

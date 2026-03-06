@@ -1,29 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Checkout | TechStore</title>
 </head>
-<h1>Shipping Information </h1>
-<section id="checkout">
-    <form action="account.html">
-        <fieldset>
-            <legend>Shipping Address</legend>
-            <input type="text" placeholder="Full Name" required><br>
-            <input type="text" placeholder="Street Address" required><br>
-            <input type="text" placeholder="Zip Code" required>
-        </fieldset>
-
-        <fieldset>
-            <legend>Payment Details</legend>
-            <label><input type="radio" name="pay" value="credit" checked> Credit Card</label>
-            <label><input type="radio" name="pay" value="paypal"> PayPal</label>
-        </fieldset>
-
-        <button type="submit">Place Order</button>
-    </form>
-
-    <aside style="position: sticky; top: 10px;">
-        <h3>Order Summary</h3>
-        <p>Subtotal: $20.00</p>
-        <p>Shipping: $5.00</p>
-        <p><strong>Total: $25.00</strong></p>
-    </aside>
-</section>
+<body>
+    <header><strong>CHECKOUT</strong></header>
+    <main class="checkout-layout">
+        <div style="flex: 2;"> <h3>Shipping Details</h3>
+            <form action="account.html">
+                <input type="text" placeholder="Full Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <button type="submit" class="shimmer-btn">Place Order</button>
+            </form>
+        </div>
+        <aside style="flex: 1; background: var(--card-bg); padding: 30px; border-radius: var(--radius);">
+            <h3>Total: $299.00</h3>
+        </aside>
+    </main>
+</body>
+</html>

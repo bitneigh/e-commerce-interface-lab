@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Our Collection - TechStore</title>
+    <title>Premium Collection | TechStore</title>
 </head>
 <body>
     <header>
-        <h1>TechStore</h1>
+        <div class="logo"><strong>TECHSTORE</strong></div>
         <nav>
             <ul>
                 <li><a href="landing.html">Home</a></li>
@@ -19,49 +19,30 @@
         </nav>
     </header>
 
-    <main style="display: flex; flex-wrap: wrap; gap: 30px;">
-        <aside style="flex: 1; min-width: 200px; max-width: 250px;">
-            <form style="position: sticky; top: 20px; box-shadow: var(--shadow);">
-                <h3>Filters</h3>
-                <section>
-                    <h4>Categories</h4>
-                    <label><input type="checkbox" name="cat" value="audio"> Audio</label><br>
-                    <label><input type="checkbox" name="cat" value="wearables"> Wearables</label><br>
-                    <label><input type="checkbox" name="cat" value="accessories"> Accessories</label>
-                </section>
-                <section>
-                    <h4>Price Range</h4>
-                    <label><input type="radio" name="price" value="low"> Under $100</label><br>
-                    <label><input type="radio" name="price" value="mid"> $100 - $500</label><br>
-                    <label><input type="radio" name="price" value="high"> Over $500</label>
-                </section>
-                <button type="button" style="width: 100%; margin-top: 10px;">Apply Filters</button>
-            </form>
+    <div class="shop-container">
+        <aside style="padding: 20px; background: #fff; border-radius: 20px; margin-bottom: 20px;">
+            <h3>Filters</h3>
+            <label><input type="checkbox"> Audio</label><br>
+            <label><input type="checkbox"> Wearables</label>
         </aside>
 
-        <section class="product-grid" style="flex: 3; min-width: 300px;">
-            
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Headphones" style="width:100%; border-radius: 8px;">
-                <h3>Wireless Headphones</h3>
-                <p>Industry-leading noise cancellation for pure sound.</p>
-                <p class="price">299.00</p> <a href="detail.html" style="text-decoration:none;">
-                    <button style="width:100%;">View Details</button>
-                </a>
+        <main class="product-grid">
+            <article>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
+                <h4>Wireless Max</h4>
+                <p style="color: var(--accent); font-weight: bold;">$299</p>
+                <a href="detail.html"><button class="btn-shimmer">View Details</button></a>
             </article>
 
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Smart Watch" style="width:100%; border-radius: 8px;">
-                <h3>Smart Watch</h3>
-                <p>Track your fitness and stay connected on the go.</p>
-                <p class="price">399.00</p>
-                <a href="detail.html" style="text-decoration:none;">
-                    <button style="width:100%;">View Details</button>
-                </a>
+            <article>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch">
+                <h4>Smart Watch Ultra</h4>
+                <p style="color: var(--accent); font-weight: bold;">$399</p>
+                <a href="detail.html"><button class="btn-shimmer">View Details</button></a>
             </article>
 
-
-        </section>
-    </main>
+         
+        </main>
+    </div>
 </body>
 </html>

@@ -1,28 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>My Account</title>
 </head>
-<header>
-    <h1>Hello, Customer!</h1>
-    <nav>
-        <a href="#">Order History</a> | 
-        <a href="#">Profile Settings</a> | 
-        <a href="#">Wishlist</a>
-    </nav>
-</header>
+<body>
+    <header>
+        <div class="logo"><strong>TECHSTORE</strong></div>
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h3>Previous Purchases</h3>
-<dl>
-    <dt>Order #12345</dt>
-    <dd>Delivered on Oct 12, 2025 - $45.00</dd>
-</dl>
+    <main class="profile-container">
+        <section class="profile-header">
+            <div>
+                <h1 style="margin: 0;">Welcome back, Customer!</h1>
+                <p style="color: #86868b; margin: 5px 0 0 0;">Member since March 2026</p>
+            </div>
+        </section>
 
-<details>
-    <summary>View Details for Order #12345</summary>
-    <p>Items: 1x Headphones, 2x USB Cables</p>
-</details>
+        <div class="checkout-layout"> <div style="flex: 2;">
+                <h3>Recent Orders</h3>
+                
+                <div class="order-card">
+                    <div>
+                        <strong>Order #88219</strong>
+                        <p style="margin: 5px 0; font-size: 14px; color: #86868b;">Placed on March 4, 2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="status-badge">Delivered</span>
+                        <p style="font-weight: bold; margin-top: 5px;">$299</p>
+                    </div>
+                </div>
 
-<form action="/signup" method="POST">
-    <input type="email" placeholder="Email" required><br>
-    <input type="password" placeholder="Password" required><br>
-    <button type="submit">Sign Up</button>
-</form>
+                <div class="order-card">
+                    <div>
+                        <strong>Order #88102</strong>
+                        <p style="margin: 6px 0; font-size: 14px; color: #86868b;">Placed on Feb 20, 2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="status-badge" style="background: #f5f5f7; color: #86868b;">Archived</span>
+                        <p style="font-weight: bold; margin-top: 5px;">$150</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside style="flex: 1;">
+                <div style="background: var(--card-bg); padding: 30px; border-radius: var(--radius);">
+                    <h3>Account Settings</h3>
+                    <p style="font-size: 14px;"><strong>Email:</strong> customer@example.com</p>
+                    <p style="font-size: 14px;"><strong>Shipping:</strong> 123 Tech Lane, Silicon Valley</p>
+                    
+                    <button class="shimmer-btn" style="width: 100%; margin-top: 20px;">Edit Profile</button>
+                    <button style="width: 100%; margin-top: 10px; background: none; color: #ff3b30; border: 1px solid #ff3b30;">Sign Out</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
